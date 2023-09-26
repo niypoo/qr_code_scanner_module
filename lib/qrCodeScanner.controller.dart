@@ -16,11 +16,8 @@ class QRCodeScannerController extends GetxController {
 
     // else @start Handle to avoid duplicated
     isHandling = true;
-
-    // prams => convert query params to map
-    final Map<String, String> params = Uri.splitQueryString(value);
-
+    
     // go to Accepting invitation with prams
-    Get.back(result: params);
+    Get.back(result: value);
   }
 }
