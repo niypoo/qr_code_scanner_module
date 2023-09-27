@@ -17,7 +17,8 @@ dependencies:
     git: https://github.com/niypoo/fly_ui.git
   # Config
   app_configuration_service:
-    git: https://github.com/niypoo/app_configuration_service.git
+    git: 
+      url: git@github.com:niypoo/app_configuration_service.git
 
 
 dev_dependencies:
