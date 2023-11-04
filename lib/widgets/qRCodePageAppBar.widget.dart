@@ -12,13 +12,7 @@ class QRCodePageAppBar extends GetView<QRCodeScannerController>
   @override
   Widget build(BuildContext context) {
     return FlyAppBar(
-      title: 'QR Coder scanner'.tr,
-      // actions: [
-      //   // IconButton(
-      //   //   onPressed: controller.youCanUseQrCodeForBottomSheet,
-      //   //   icon: Icon(UniconsLine.question_circle),
-      //   // ),
-      // ],
+      title: 'Code scanner'.tr,
     );
   }
 

@@ -17,7 +17,7 @@ class QRCodeTitleAndDescription extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         AutoSizeText(
-          'Simply point the camera and scan their code.'.tr,
+          'Simply point the camera and scan the code.'.tr,
           style: Get.textTheme.bodySmall,
           textAlign: TextAlign.center,
         ),
