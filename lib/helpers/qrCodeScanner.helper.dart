@@ -3,9 +3,17 @@ import 'package:qr_code_scanner_module/qrCodeScanner.binding.dart';
 import 'package:qr_code_scanner_module/qrCodeScanner.view.dart';
 
 class QrCodeScannerHelper {
-  static Future<String?> show() async {
+  static Future<String?> show({
+    String? pageTitle,
+    String? title,
+    String? description,
+  }) async {
     return await Get.to(
-      () => const QRCodeScannerView(),
+      () => QRCodeScannerView(
+        pageTitle: pageTitle,
+        title: title,
+        description: description,
+      ),
       binding: QRCodeScannerBinding(),
     ) as String?;
   }

@@ -7,12 +7,15 @@ class QRCodePageAppBar extends GetView<QRCodeScannerController>
     implements PreferredSizeWidget {
   const QRCodePageAppBar({
     Key? key,
+    this.pageTitle,
   }) : super(key: key);
+
+  final String? pageTitle;
 
   @override
   Widget build(BuildContext context) {
     return FlyAppBar(
-      title: 'Code scanner'.tr,
+      title: pageTitle ?? 'Code scanner'.tr,
     );
   }
 

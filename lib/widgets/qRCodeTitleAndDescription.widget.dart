@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class QRCodeTitleAndDescription extends StatelessWidget {
+  final String? title;
+  final String? description;
+
   const QRCodeTitleAndDescription({
     Key? key,
+    this.title,
+    this.description,
   }) : super(key: key);
 
   @override
@@ -12,12 +17,12 @@ class QRCodeTitleAndDescription extends StatelessWidget {
     return Column(
       children: [
         AutoSizeText(
-          'Point camera at the code'.tr,
+          title ?? 'Point camera at the code'.tr,
           style: Get.textTheme.headline5,
           textAlign: TextAlign.center,
         ),
         AutoSizeText(
-          'Simply point the camera and scan the code.'.tr,
+          description ?? 'Simply point the camera and scan the code.'.tr,
           style: Get.textTheme.bodySmall,
           textAlign: TextAlign.center,
         ),

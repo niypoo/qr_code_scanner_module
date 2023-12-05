@@ -5,23 +5,36 @@ import 'package:qr_code_scanner_module/widgets/qRCodePageAppBar.widget.dart';
 import 'package:qr_code_scanner_module/widgets/qRCodeTitleAndDescription.widget.dart';
 
 class LandscapeView extends StatelessWidget {
+  final String? title;
+  final String? description;
+  final String? pageTitle;
   const LandscapeView({
     Key? key,
+    this.title,
+    this.description,
+    this.pageTitle,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const FlyLandscapeView(
-      childA: Column(
-        children: [
-          QRCodePageAppBar(),
-          QRCodeTitleAndDescription(),
-        ],
+    return FlyLandscapeView(
+      childA: SingleChildScrollView(
+        child: Column(
+          children: [
+            QRCodePageAppBar(pageTitle: pageTitle),
+            QRCodeTitleAndDescription(
+              title: title,
+              description: description,
+            ),
+          ],
+        ),
       ),
-      childB: Column(
-        children: [
-          QRCodeCameraScanner(),
-        ],
+      childB: const SingleChildScrollView(
+        child: Column(
+          children: [
+            QRCodeCameraScanner(),
+          ],
+        ),
       ),
     );
   }
