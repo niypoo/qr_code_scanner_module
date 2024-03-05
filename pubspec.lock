@@ -302,7 +302,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: c3e449318c2a343839f12d966bf78cc6eac25e2d
+      resolved-ref: "4dcf9fa1268a34c6a24a3ffdce8e4eed9b60f60c"
       url: "git@github.com:niypoo/fly_ui.git"
     source: git
     version: "1.0.0+1"
