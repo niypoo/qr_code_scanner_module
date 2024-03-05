@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fly_ui/views/layouts/responsiveView.widget.dart';
 import 'package:fly_ui/views/layouts/scaffoldLayout.widget.dart';
-import 'package:fly_ui/views/layouts/scaffoldPadding.widget.dart';
 import 'package:get/get.dart';
 import 'package:qr_code_scanner_module/widgets/qRCodePageAppBar.widget.dart';
 
@@ -22,23 +21,18 @@ class QRCodeScannerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlyScaffold(
-      appBar: context.isLandscape
-          ? null
-          : QRCodePageAppBar(
-              pageTitle: pageTitle,
-            ),
-      child: FlyScaffoldPadding(
-        child: FlyLayoutResponsiveView(
-          portrait: PortraitView(
-            title: title,
-            description: description,
-          ),
-          landscape: LandscapeView(
-            pageTitle: pageTitle,
-            title: title,
-            description: description,
-          ),
+    return FlyScaffold.padding(
+      appBar:
+          context.isLandscape ? null : QRCodePageAppBar(pageTitle: pageTitle),
+      child: FlyLayoutResponsiveView(
+        portrait: PortraitView(
+          title: title,
+          description: description,
+        ),
+        landscape: LandscapeView(
+          pageTitle: pageTitle,
+          title: title,
+          description: description,
         ),
       ),
     );
