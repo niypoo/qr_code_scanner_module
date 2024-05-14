@@ -18,7 +18,7 @@ class QRCodeTitleAndDescription extends StatelessWidget {
       children: [
         AutoSizeText(
           title ?? 'Point camera at the code'.tr,
-          style: Get.textTheme.headline5,
+          style: Get.textTheme.titleLarge,
           textAlign: TextAlign.center,
         ),
         AutoSizeText(
