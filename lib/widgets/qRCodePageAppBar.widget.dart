@@ -15,7 +15,7 @@ class QRCodePageAppBar extends GetView<QRCodeScannerController>
   @override
   Widget build(BuildContext context) {
     return FlyAppBar(
-      title: pageTitle ?? 'Code scanner'.tr,
+      title: pageTitle ?? 'QRCODE.Code scanner'.tr,
     );
   }
 

@@ -17,12 +17,12 @@ class QRCodeTitleAndDescription extends StatelessWidget {
     return Column(
       children: [
         AutoSizeText(
-          title ?? 'Point camera at the code'.tr,
+          title ?? 'QRCODE.Point camera at the code'.tr,
           style: Get.textTheme.titleLarge,
           textAlign: TextAlign.center,
         ),
         AutoSizeText(
-          description ?? 'Simply point the camera and scan the code.'.tr,
+          description ?? 'QRCODE.Simply point the camera and scan the code.'.tr,
           style: Get.textTheme.bodySmall,
           textAlign: TextAlign.center,
         ),
