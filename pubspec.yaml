@@ -11,7 +11,8 @@ dependencies:
     sdk: flutter
     
   get: ^4.6.6
-  qr_mobile_vision: ^5.0.1
+  # qr_mobile_vision: ^5.0.1
+  qr_code_scanner_plus: ^2.0.6
   # UI
   fly_ui:
     git:
